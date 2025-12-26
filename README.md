@@ -4,7 +4,7 @@ A hardware-based side-scrolling game implemented in **Verilog** on the **Terasic
 
 *Note: In compliance with university academic integrity policies, the source code for this project is not public.*
 
-## 2. Project Overview
+## 1. Project Overview
 This project replaces traditional button inputs with **voice-amplitude control**. A player "jumps" by making noise into a microphone, which is processed via the FPGA's onboard Audio Codec.
 
 ### Key Features:
@@ -13,7 +13,7 @@ This project replaces traditional button inputs with **voice-amplitude control**
 * **Hardware Collision Detection:** Pixel-accurate collision logic between the player sprite and dynamic pillar obstacles.
 * **Dynamic Difficulty:** Obstacle gaps change position based on the player's score.
 
-## 3. System Architecture
+## 2. System Architecture
 The system is composed of several high-level modules:
 
 1.  **Audio Subsystem (`volume.v`):** Interfaces with the Wolfson WM8731 codec via I2C to capture 16-bit audio samples. It calculates the signal magnitude to trigger the "jump" logic.
@@ -22,12 +22,12 @@ The system is composed of several high-level modules:
 4.  **Collision Engine (`collision.v`):** Purely combinational logic that monitors coordinate overlaps to trigger a game-over state.
 
 
-## 4. Hardware Requirements
+## 3. Hardware Requirements
 * **FPGA:** Terasic DE1-SoC
 * **Display:** VGA Monitor (640x480 @ 60Hz)
 * **Audio:** 3.5mm Microphone (Line-in)
 
-## 5. Implementation Details
+## 4. Implementation Details
 The game uses a complex FSM structure to handle the drawing of objects. To ensure smooth performance, the background is only redrawn upon a reset/collision, while moving objects (the bird and pillars) use an "erase-and-redraw" cycle within the VGA arbiter.
 
 ### Score System
