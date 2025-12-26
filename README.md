@@ -1,6 +1,3 @@
-# Voice-Controlled-VGA-Game-FPGA
-
-
 # Voice-Controlled "Flappy" Game (FPGA)
 
 A hardware-based side-scrolling game implemented in **Verilog** on the **Terasic DE1-SoC (Cyclone V)** platform. This project utilizes real-time audio processing for character control and VGA output for display.
