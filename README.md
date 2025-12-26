@@ -18,8 +18,8 @@ The system is composed of several high-level modules:
 
 1.  **Audio Subsystem (`volume.v`):** Interfaces with the Wolfson WM8731 codec via I2C to capture 16-bit audio samples. It calculates the signal magnitude to trigger the "jump" logic.
 2.  **VGA Arbiter (`vga_demo.v`):** A finite state machine (FSM) that manages bus access between the player, pillars, and background reset modules to prevent screen tearing.
-3.  **Physics Engine (`player.v`):** Implements gravity and velocity-based movement.
-4.  **Collision Engine (`collision.v`):** Purely combinational logic that monitors coordinate overlaps to trigger a game-over state.
+3.  **Physics Module (`player.v`):** Implements gravity and velocity-based movement.
+4.  **Collision Module (`collision.v`):** Purely combinational logic that monitors coordinate overlaps to trigger a game-over state.
 
 
 ## 3. Hardware Requirements
