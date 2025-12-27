@@ -32,3 +32,6 @@ The game uses a complex FSM structure to handle the drawing of objects. To ensur
 
 ### Score System
 The score is tracked using a binary-to-BCD converter and displayed in real-time on the **HEX0-HEX5** 7-segment displays.
+
+## 📁 Project Documentation
+* [Technical Presentation (PDF)](./Project_Technical_Presentation.pdf) - A deep dive into the FSM logic, audio thresholding, and VGA arbitration used in this project.
